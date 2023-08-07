@@ -1,2 +1,2 @@
 # users
-manage users connection, subscription, accounts on my website
+manage users connection, subscription, and contact page (messages) on my website. 
