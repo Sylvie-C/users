@@ -7,15 +7,14 @@
 
 <head>
 	<title>SWC Connection page</title>
-  <link rel="stylesheet" href="sylvieswebcorner.css" media="only screen and (max-width:400px) , only screen and (max-width:800px) , only screen and (min-width:800px)" />
+  <link rel="stylesheet" href="../sylvieswebcorner.css" media="only screen and (max-width:400px) , only screen and (max-width:800px) , only screen and (min-width:800px)" />
 	<meta name="viewport" content="width=device-width , initial-scale=1.0" />
 	<meta charset="UTF-8" />
-  <script type="text/javascript" src="../sylvieswebcorner.js"></script>
 </head>
 
-<body>  
+<body id="connection_page" >  
 
-  <a href="../index.html" class="navIcon"> <img src="images/home_icon.jpg" alt="home icon" /> </a>
+  <a href="../index.html" class="navIcon"> <img src="../images/home_icon.jpg" alt="home icon" /> </a>
 
   <h2>Se connecter / Log in</h2>
 
@@ -35,12 +34,11 @@
 	  <input type="submit" value="OK"  />
   </form>
 
-    <p>Jamais inscrit ? No account ?/connect_subscribe/connexion.php <a href="subscription.php">Créer un compte / Sign up here</a> </p>
+    <p>Jamais inscrit ? No account ? <a href="subscription.php">  Créer un compte / Sign up here  </a> </p>
 
     <p>Mot de passe oublié ? Forgot your password ? </p>
 
     <form method="POST" action="connexion.php" > 
-
       <input type="email" name="email_pwd" required   placeholder="Votre email / Your email" /> 
       <input type="submit" value="Demander nouveau mot de passe / Request new password" /> 
     </form>

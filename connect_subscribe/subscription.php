@@ -5,9 +5,7 @@
 
 <head>
 	<title>SWC S'inscrire / Sign up</title>
-
-  <link rel="stylesheet" href="sylvieswebcorner.css" media="only screen and (max-width:400px) , only screen and (max-width:800px) , only screen and (min-width:800px)" />
-
+  <link rel="stylesheet" href="../sylvieswebcorner.css" media="only screen and (max-width:400px) , only screen and (max-width:800px) , only screen and (min-width:800px)" />
 	<meta name="viewport" content="width=device-width , initial-scale=1.0" />
 	<meta charset="UTF-8" />
 </head>
@@ -15,8 +13,7 @@
 
 <body>
 
-  <a href="../index.html" class="navIcon">  <img src="images/home_icon.jpg" alt="home icon" />  </a>
-  <a href="connexion.php"> Retour page connexion / Back to log in page </a>
+  <a href="../index.html" class="navIcon">  <img src="../images/home_icon.jpg" alt="home icon" />  </a>
 
   <h2> Inscription </h2>
 

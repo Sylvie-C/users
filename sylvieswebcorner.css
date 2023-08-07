@@ -1,0 +1,139 @@
+/* STYLE SHEET FOR SYLVIESWEBCORNER.FR WEBSITE. 
+  WHOLE WEBSITE : GENERAL
+    FONTS
+    Responsive Display
+    MEDIA QUERIES
+      Very small screen devices
+      Medium screen devices
+      Large screen devices
+  
+    STYLES FOR WHOLE WEBSITE
+
+    SPECIFIC STYLES TO WEBSITE PAGES
+      Home page, 3D, music, contact, connection. 
+*/
+
+
+/* -------  WHOLE WEBSITE : GENERAL  ------- */
+
+/* FONTS */
+@font-face { font-family: GreatVibes ;   src: url("fonts/GreatVibes.ttf") ; }
+@font-face { font-family: parisienne ;   src:url("fonts/parisienne.ttf") ; }
+@font-face { font-family: dancingScript ;   src: url('fonts/dancingscript_bold.ttf') ; }
+/* End of Fonts */
+
+
+
+/* -------  MEDIA QUERIES  ------- */
+
+/* -------  XS  Very small screen devices */
+
+@media only screen and (max-width:400px) {
+
+  /*  HOMEPAGE  */
+  body.home { background-image: url('images/00_fresque.gif') ; background-repeat: no-repeat ;  width: 100%;  background-position: top center ;  }
+
+  div#intro { position: fixed;   top: 2%;   width: 100%;   height: 50%;   display: grid;   grid-template-columns: 100%; }
+  div.navBar { position: fixed;   bottom:10%;   display: grid;   grid-template-columns: 100%;   width: 90%;   margin-left: 5%; }
+
+  /* WEBSITES PAGE */
+  body.websites img.icon { width: 50%;   margin-left: 25%;   }
+
+  /*  MUSIC PAGE  */
+  body.music {  background-image:url("images/music_small.gif") ; background-position: top center;  }
+  
+} /* End of Small screens (max-width=400px) media query */
+
+
+
+/* -------  M  Medium screen devices */
+
+@media only screen and (max-width:800px) {
+
+
+
+} /* End of Media screen max-width=800px */
+
+
+
+/* -------  XL  Large screen devices */
+
+@media only screen and (min-width:800px) {
+
+  /*   Responsive display */
+  * { box-sizing:border-box ; }
+  .horizontalx4 { display: grid;   grid-template-columns: 20% 20% 20% 20% ;   grid-gap: 3%;   justify-content: center; }
+  .horizontalx4 audio { width: 100%; }
+
+  /*  HOMEPAGE  */
+
+  body.home { background-image: url('images/00_fresque.gif') ; background-repeat: no-repeat ;  width: 100%;  background-position: top center ;  }
+  div#intro { position: fixed;   top: 10%;   width: 80%;   margin-left: 10%;   display: grid;   grid-template-columns: 100%; }
+  div.navBar , div.navAnim { width: 70%;   margin-left: 15%;   margin-top: 5%;   display: grid;   grid-template-columns: 33% 33% 33%;   grid-gap: 5%; }
+  div.navBar { position: relative;   top: -50%; }
+
+  /*  WEBSITES PAGE  */
+  body.websites { display: grid;   grid-template-columns: 15% 15% 15% 15% 15%;   grid-gap: 5%;   justify-content: center; }
+  body.websites h2 { grid-column: 1/7;   width: 100%; }
+  body.websites img.icon { width: 100%; margin: 3px; }
+
+}  /*  End of Media Query Large screen devices  */
+
+
+
+  /* STYLES FOR WHOLE WEBSITE */
+body { background-color: rgb(170,140,190); }
+label { font-family: GreatVibes, Purisa, "times new roman", serif ;   color: rgb(60,210,160);   font-size: 28px; }
+.navIcon { width: 15%; }
+
+nav a { margin: 2%;   padding: 2%;   font-family: DancingScript, Purisa, "times new roman", serif;   font-size: 30px;   color: rgb(10,250,70) ; }
+nav a:hover { color: rgb(165,140,175); }
+
+input[type=submit] { font-family: "Liberation serif" , "times new roman", serif ;   background-color: rgb(60,210,160) ;   color: rgb(55,5,77);  font-size: 16px; }
+input[type=submit]:hover { background-color: rgb(55,5,77) ;   color: rgb(60,210,160); }
+
+
+	/* Titles */
+h1 { color: rgb(120,75,140);   text-align: center;   font-family: GreatVibes, Purisa, "times new roman", serif ;   font-size: 50px; }
+h2 { width: 100%;   color: rgb(55,5,77);   background-color: rgb(60,210,160);   text-align: center;   font-family: GreatVibes, Purisa, "times new roman", serif ;   font-size: 50px; }
+h3 { margin-top: 10px;   margin-bottom: 10px;   text-align: center;   font-family: DancingScript, Purisa, "times new roman", serif;   font-size: 30px;   color: rgb(85,55,110);   background-color: rgb(60,210,160); }
+h5 { color: rgb(85,55,110);   text-align: center;   font-family: parisienne, Purisa, "times new roman", serif ;   font-size: 30px; }
+
+  /* Footer */
+foot { position: fixed;   bottom: 5%; }
+foot a { font-family: DancingScript, Purisa, "times new roman", serif;   font-size: 25px;   margin: 2px;   color: rgb(10,250,70); }
+foot a:hover { color: rgb(75,0,90); }
+
+
+/* ---------   SPECIFIC STYLES TO WEBSITE PAGES   --------- */
+
+/*  HOMEPAGE */
+
+div.logo { width: 100px; text-align: center;  }
+div.logo img { width: 100%; }
+
+div.navBar a { color: rgb(75,0,90) ;   background-color: rgba(10,250,70,0.5);   text-align: center; }
+div.navBar a:hover { color: rgb(10,250,70); }
+
+/*  ANIMATIONS 3D  */
+body.animations video { width: 100%;  margin-top: 10px; }
+body.animations img.gif { width: 90%; margin: 10px; }
+body.animations img.earth_gif { width: 150px ; }
+
+/*  MUSIC PAGE  */
+body.music {  background-image:url("images/music.gif") ;  }
+
+/*  CONTACT PAGE  */
+body#contact_page p { font-family: GreatVibes, Purisa, "times new roman", serif ;  color: rgb(55,5,77);  font-size: 28px;  }
+body#contact_page span { font-family: Meera , Arial , serif ; }  /* font-family for username */
+body#contact_page textarea { width: 70%;   height: 150px; }
+
+/* CONNECTION.PHP PAGE */
+body#connection_page { font-family: GreatVibes, Purisa, "times new roman", serif ;   color: rgb(60,210,160);   font-size: 28px; }
+body#connection_page p , label { color: rgb(55,5,77);  }
+body#connection_page a { font-family: GreatVibes, Purisa, "times new roman", serif ;   color: rgb(55,5,77);   font-size: 28px; }
+body#connection_page a:hover { color: rgb(60,210,160) ; }
+
+
+
+
