@@ -12,18 +12,17 @@
 	<meta charset="UTF-8" />
 </head>
 
-<body> 
+<body id="contact_page" > 
   <a href="index.html" class="navIcon"> <img src="images/home_icon.jpg" alt="home icon" /> </a>
 
   <h2> Contact </h2>
   <form method="POST" action="contact.php">
 	  <p>
 		  <?php  
-        echo "<br/>Bonjour " . $_SESSION["username"] . ". Vous pouvez écrire votre message ci-dessous. " ;  
-        echo "<br/>Hello " . $_SESSION["username"] . ". You can leave your message below. " ; 
+        echo "<p>Bonjour <span>" . $_SESSION["username"] . "</span>. Vous pouvez écrire votre message ci-dessous.<br/>Hello <span>" . $_SESSION["username"] . "</span>. You can leave your message below. </p>" ;  
       ?>
       <br/>
-		  <textarea type="text" name="message" rows=8 cols=45></textarea>
+		  <textarea type="text" name="message"></textarea>
 	  </p>
 	  <input type="submit" value="Envoi/Send"  />
   </form>
@@ -59,10 +58,7 @@ if ( ($_POST['message']) != NULL ) {
   $pdo_statement1 = $db -> prepare($query_db1) ; 
   $pdo_statement1 -> execute ( [ "file" => $file  ,  "ldate" => $local_date  ,  "email" => $_SESSION["email"] , "ip" => $ip ] ) ; 
 
-
-
   // SERVER REQUEST DATE AND TIME TREATMENT
- 
   // after request execution, extract and convert server timestamp request
   $server_timestamp = $_SERVER["REQUEST_TIME"] ; // request at timestamp (from 01/01/1970 00:00:01)
 
@@ -75,14 +71,12 @@ if ( ($_POST['message']) != NULL ) {
 
 
   // AFTER REQUEST, EXTRACT LAST AUTO_INCREMENTED ID NUMBER
-
   $query_id = "SELECT LAST_INSERT_ID()" ; 
   $pdo_statement3 = $db -> prepare ($query_id) ; 
   $pdo_statement3 -> execute () ;
   $id_array = $pdo_statement3 -> fetchAll() ; 
 
   $id = $id_array[0]["LAST_INSERT_ID()"] ;  // last message id saved in variable
-
 
   // UPDATE FILE STORAGE (with message ID, message, ...)
   if ( isset ($_POST["message"]) ) {  // If message written only
@@ -94,17 +88,13 @@ if ( ($_POST['message']) != NULL ) {
   $pdo_statement4 = $db -> prepare ($query_db2) ; 
   $pdo_statement4 -> execute ( [ "server_dt" => $query_dt  , "id" => $id ]  ) ; 
 
-
   // MESSAGE AKNOWLEDGE RECEIPT
   if (  $_POST["message"] != NULL  ) {
     echo "<br/><br/><strong>Votre message a bien été transmis. </strong><br/> Merci et à bientôt. " ; 
   }
-
 }
 
 ?>
-
-
 
 </html>
 
