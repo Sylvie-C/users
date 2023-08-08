@@ -1,9 +1,7 @@
+
+<?php include ("db_connection.php") ; ?>
+
 <?php
-
-// TO BE INCLUDED AT BEGINNING OF ALL PAGES CALLING PDO OBJECT $db FOR SQL REQUESTS
-try { $db = new PDO ( "mysql:host=localhost;dbname=swc" , "utilisateurTest" , "abc_123" , [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION] ) ; }
-catch (\PDOException $e) { throw new \PDOException ($e->getMessage() , $e->getCode()) ; }
-
 
 // -------------------------------------------------------------------------------------------------
 function my_xss_post() {   
