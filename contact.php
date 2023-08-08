@@ -79,9 +79,8 @@ if ( ($_POST['message']) != NULL ) {
   $id = $id_array[0]["LAST_INSERT_ID()"] ;  // last message id saved in variable
 
   // UPDATE FILE STORAGE (with message ID, message, ...)
-  if ( isset ($_POST["message"]) ) {  // If message written only
   file_storage ( $id, $file , $local_date , $_SESSION["email"] , $ip , $_POST["message"] ) ; 
-  }
+
 
   // UPDATE DB WITH SERVER DATE AND TIME REQUEST
   $query_db2 = "UPDATE messages SET server_date_time=:server_dt WHERE msg_id=:id" ; 
@@ -89,9 +88,7 @@ if ( ($_POST['message']) != NULL ) {
   $pdo_statement4 -> execute ( [ "server_dt" => $query_dt  , "id" => $id ]  ) ; 
 
   // MESSAGE AKNOWLEDGE RECEIPT
-  if (  $_POST["message"] != NULL  ) {
     echo "<br/><br/><strong>Votre message a bien été transmis. </strong><br/> Merci et à bientôt. " ; 
-  }
 }
 
 ?>
